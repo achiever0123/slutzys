@@ -1,0 +1,28 @@
+@import '../../../style/vars.less';
+
+.conversation-list {
+  padding: 20px 0;
+  width: 100%;
+  height: calc(100% + 50px);
+  background-color: @theme-color;
+
+  .user-bl {
+    cursor: pointer;
+    color: @secondary-color;
+    font-size: 20px;
+    text-align: center;
+    margin: 0;
+  }
+  .c-list-item {
+    height: calc(100% - 101px);
+    overflow: auto;
+    position: relative;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    .alert-text {
+      color: @white;
+      padding: 15px;
+    }
+  }
+}

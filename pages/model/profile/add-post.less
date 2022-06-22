@@ -1,0 +1,174 @@
+.add-post-card-wrapper {
+
+    .ant-card-body {
+        padding: 5px;
+    }
+
+    .add-post-header-tabs-wrapper {
+        padding: 2px 2px;
+        margin-bottom: 10px;
+
+        .add-post-header-tabs {
+            text-align: center;
+            cursor: pointer;
+            padding: 5px 8px;
+            font-size: medium;
+            font-weight: bolder;
+        }
+
+        .active {
+            border-bottom: 3px solid @primary-color;
+        }
+    }
+
+    .post-card-textarea {
+        margin-bottom: 10px;
+    }
+
+    .button-tab-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        align-items: center;
+        margin: 0 0 20px 0;
+
+        .tab-button {
+            margin-right: 10px;
+
+            .ant-btn-primary {
+                background-color: darkgrey;
+                border: none;
+                padding: 0 15px;
+                color: black;
+            }
+        }
+
+        .active {
+            .ant-btn-primary {
+                background-color: dimgray;
+                border: none;
+                padding: 0 40px;
+                color: white;
+            }
+        }
+    }
+
+    .post-card-image-drop {
+        margin-bottom: 15px;
+    }
+
+
+    .post-card-footer-divider {
+        margin: 0px 0px;
+
+        .ant-divider {
+            margin: 0px 0px;
+            //background-color: red;
+
+        }
+    }
+
+    .post-btn-wrapper {
+        .ant-btn-primary {
+            background-color: @primary-color;
+        }
+
+        .swith-label {
+            margin-left: 4px;
+            /* font-size: 12px; */
+        }
+    }
+}
+
+
+@media screen and (max-width: @xl-screen) {}
+
+@media screen and (max-width: @lg-screen) {}
+
+@media screen and (max-width: @md-screen) {}
+
+@media screen and (max-width: @sm-screen) {
+    .add-post-card-wrapper {
+
+        .ant-card-body {
+            padding: 2px;
+        }
+
+        .add-post-header-tabs-wrapper {
+            padding: 2px 2px;
+            margin-bottom: 6px;
+
+            .add-post-header-tabs {
+                text-align: center;
+                cursor: pointer;
+                padding: 5px 3px;
+                font-size: 12px;
+                font-weight: bold;
+            }
+
+            .active {
+                border-bottom: 3px solid @primary-color;
+            }
+        }
+
+        .post-card-textarea {
+            margin-bottom: 6px;
+        }
+
+        .button-tab-wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            align-items: center;
+            margin: 0 0 15px 0;
+
+            .tab-button {
+                margin-right: 10px;
+
+                .ant-btn-primary {
+                    background-color: darkgrey;
+                    border: none;
+                    padding: 0 12px;
+                    color: black;
+                }
+            }
+
+            .active {
+                .ant-btn-primary {
+                    background-color: dimgray;
+                    border: none;
+                    padding: 0 20px;
+                    color: white;
+                }
+            }
+        }
+
+        .post-card-image-drop {
+            margin-bottom: 15px;
+        }
+
+
+        .post-card-footer-divider {
+            margin: 0px 0px;
+
+            .ant-divider {
+                margin: 0px 0px;
+                //background-color: red;
+
+            }
+        }
+
+        .post-btn-wrapper {
+            .ant-btn-primary {
+                background-color: @primary-color;
+            }
+
+            .swith-label {
+                margin-left: 4px;
+                /* font-size: 12px; */
+            }
+        }
+    }
+}
+
+@media screen and (max-width: @xs-screen) {}

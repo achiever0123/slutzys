@@ -1,0 +1,149 @@
+@import '../../../style/vars.less';
+
+.comment-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  .cmt-user {
+    display: flex;
+    flex-direction: column;
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    @media screen and (max-width: @mobile-screen) {
+      display: none;
+    }
+  }
+  .cmt-area {
+    padding: 0 10px;
+    width: 100%;
+    position: relative;
+    .ant-form-item {
+      margin: 0
+    }
+    .ant-input {
+      background: @light-grey;
+      padding: 5px 15px;
+      padding-right: 30px;
+      border: none;
+      height: 50px;
+      min-height: unset;
+    }
+    .grp-emotions {
+      position: absolute;
+      right: 25px;
+      top: 15px;
+      .anticon {
+        font-size: 22px;
+        color: @primary-color;
+      }
+    }
+  }
+  .submit-btn {
+    background-image: linear-gradient(0deg,@theme-color,@primary-color);
+    color: @white;
+    box-shadow: 0 5px 10px rgba(50,50,50,0.2);
+    padding: 0.7em 2em;
+    font-size: 0.9em;
+    font-weight: 600;
+    border-radius: 0.5em;
+    height: 52px;
+    .anticon-send {
+      font-size: 18px;
+      transform: rotate(-45deg);
+    }
+  }
+}
+.cmt-list {
+  background-color: @light-blue;
+  border-radius: 5px;
+  .cmt-item {
+    display: flex;
+    margin-bottom: 15px;
+    padding: 5px;
+    img {
+      width: 40px;
+      height: 40px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    .cmt-content {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      padding: 0 10px;
+      .cmt-user {
+        font-size: 13px;
+        font-weight: 600;
+        display: flex;
+        justify-content: space-between;
+        .cmt-time {
+          color: @dark-grey;
+          font-size: 10px;
+          font-weight: normal;
+          margin-left: 20px;
+        }
+      }
+      .cmt-action {
+        .cmt-reply {
+          font-size: 13px;
+          color: @dark-grey;
+          margin-left: 15px;
+          &.active {
+            color: @highlight-color;
+          }
+        }
+        .cmt-like {
+          color: @dark-grey;
+          &.active {
+            color: @highlight-color;
+          }
+        }
+      }
+      .cmt-text {
+        color: @text-color;
+        margin-bottom: 5px;
+        white-space: pre-line;
+      }
+    }
+  }
+}
+
+.ant-form-item-control-input-content .ant-input {
+  background-color: @white;
+  color: @black;
+  padding: 4.8px 11px;
+  border: 1px solid @light-grey
+}
+
+.reply-bl-form {
+  transition: all 0.3 ease-in-out;
+  .comment-form .cmt-user img {
+    width: 35px;
+    height: 35px;
+  }
+  .comment-form .cmt-area .ant-input {
+    background: @light-grey;
+    height: 40px;
+  }
+  .comment-form .cmt-area .grp-emotions {
+    top: 10px
+  }
+}
+.reply-bl-list {
+  padding-left: 45px;
+  transition: all 0.3 ease-in-out;
+  .cmt-list .cmt-item img {
+    width: 35px;
+    height: 35px;
+  }
+}
+.view-cmt {
+  a {
+    font-size: 12px;
+  }
+}

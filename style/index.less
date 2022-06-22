@@ -1,0 +1,51 @@
+@import '../node_modules/antd/dist/antd.less';
+@import './vars.less';
+@import './default.less';
+@import './global.less';
+@import './responsive.less';
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: @white;
+  color: @text-color;
+  font-size: 14px;
+  line-height: 23px;
+  font-family: 'Merriweather Sans', 'Roboto', sans-serif !important;
+}
+
+button {
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.block-ip-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .ant-result {
+    .ant-result-title {
+      font-size: 74px;
+    }
+    .ant-result-subtitle {
+      font-size: 24px;
+    }
+  }
+}

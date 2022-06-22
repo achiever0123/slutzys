@@ -1,0 +1,42 @@
+@import '../../../style/vars.less';
+.conversation-search {
+  position: relative;
+  input {
+    padding: 1em 2.5em;
+    width: calc(100% - 25px);
+    border: none;
+    background: @primary-color;
+    color: @white;
+    margin: 12px;
+    font-size: 0.9em;
+    border-radius: 0.5em;
+    outline: none;
+    &::placeholder {
+      color: @white;
+      text-align: left;
+    }
+  }
+  .anticon-search {
+    font-size: 18px;
+    color: @white;
+    position: absolute;
+    top: calc(50% - 9px);
+    left: 18px;
+  }
+}
+
+.conversation-search-input {
+  background: @light-grey;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+}
+
+.conversation-search-input::placeholder {
+  text-align: center;
+}
+
+.conversation-search-input:focus::placeholder {
+  text-align: left;
+}

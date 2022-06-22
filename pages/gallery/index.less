@@ -1,0 +1,45 @@
+@import '../../style/default.less';
+
+.gal-stats {
+  color: @dark-grey;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.photo-carousel {
+  margin: 15px 0;
+  .list-photos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    min-height: 200px;
+  
+    .ant-image {
+      width: 12.5%;
+      padding: 2px;
+      overflow: hidden;
+  
+      @media (max-width: @mobile-screen) {
+        width: 20%;
+      }
+    }
+  
+    &.blur {
+      img {
+        filter: blur(5px);
+      }
+    }
+
+    .subscription-block {
+      position: absolute;
+      padding: 10px;
+      background: rgba(200,200,200,.5);
+      border: 1px solid @gray;
+      border-radius: 3px;
+    }
+  }
+}

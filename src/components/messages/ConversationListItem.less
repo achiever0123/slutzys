@@ -1,0 +1,89 @@
+@import '../../../style/vars.less';
+
+.conversation-list-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  position: relative;
+  color: @white
+}
+
+.conversation-left-corner {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.conversation-left-corner span {
+  font-size: 10px;
+}
+
+.conversation-list-item {
+  .online {
+    position: absolute;
+    left: -3px;
+    top: 2px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: @success-color;
+    .active {
+        display: block;
+        background-color: @success-color;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        animation: blink 1s linear infinite;
+        opacity: 0.7;
+    }
+  }
+}
+
+.conversation-list-item:hover {
+  background: @primary-color;
+  cursor: pointer;
+}
+
+.conversation-list-item.active {
+  background: @primary-color;
+  pointer-events: none;
+}
+
+.conversation-photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.conversation-title {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin: 0;
+  color: @white
+}
+
+.conversation-snippet {
+  font-size: 12px;
+  color: @white;
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.conversation-time {
+  font-size: 10px;
+  color: @dark-grey;
+  margin: 0;
+}
+
+.notification-badge {
+  position: absolute;
+  top: 40px;
+  left: 10px;
+}

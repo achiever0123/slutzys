@@ -1,0 +1,54 @@
+@import '../../../../style/vars.less';
+
+.loading-screen {
+  z-index: 99999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(1, 1, 1);
+  color: @white;
+  img, span {
+    animation-name: loading;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-delay: 0s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    padding: 20px;
+    text-align: center;
+  }
+}
+
+@keyframes loading {
+  0% {
+    font-size: 25px;
+    width: 200px;
+  }
+
+  25% {
+    font-size: 30px;
+    width: 225px;
+  }
+
+  50% {
+    font-size: 35px;
+    width: 240px;
+  }
+
+  75% {
+    font-size: 30px;
+    width: 225px;
+  }
+
+  100% {
+    font-size: 25px;
+    width: 200px;
+  }
+}

@@ -1,0 +1,31 @@
+@import '../../../../style/vars.less';
+
+.search-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  .ant-input-search-button.ant-btn-primary {
+    height: 42px;
+  }
+  .ant-input-search {
+    .ant-input {
+      padding: 5px;
+    }
+    .ant-input-group-wrapper {
+      overflow: hidden;
+    }
+    .ant-input-affix-wrapper {
+      box-shadow: none;
+      border-radius: 0!important;
+    }
+    .ant-input-group-addon {
+      .ant-input-search-button {
+        border-radius: 0!important;
+      }
+    }
+  }
+  @media (max-width: @tablet-screen) {
+    width: 100%;
+  }
+}

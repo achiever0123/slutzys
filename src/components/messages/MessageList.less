@@ -1,0 +1,63 @@
+@import '../../../style/vars.less';
+
+.message-list {
+  height: 100%;
+  overflow: auto;
+  width: 100%;
+  &::-webkit-scrollbar {
+   display: none;
+  }
+}
+
+.message-list-container {
+  padding: 10px;
+}
+
+.sub-text {
+  color: @highlight-color;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 18px;
+  padding: 25px 10px;
+  position: absolute;
+  top: 0;
+  height: 100%;
+
+  @media all and (max-width: @mobile-screen) {
+    font-size: 14px;
+  }
+}
+
+.mess-recipient {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: @light-card;
+  padding: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  .profile {
+    text-transform: capitalize;
+    cursor: pointer;
+  }
+
+  .ant-image {
+    width: 40px;
+    height: 40px;
+    margin: 9px 12px 9px;
+  }
+
+  .close-btn {
+    display: none;
+
+    @media all and (max-width: @mobile-screen) {
+      display: inline-block;
+    }
+  }
+}

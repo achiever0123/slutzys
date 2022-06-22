@@ -1,0 +1,103 @@
+@import '../../../style/vars.less';
+
+.compose {
+  display: flex;
+  align-items: center;
+  background-color: @white;
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  border-bottom: 1px solid @theme-color;
+  border-top: 1px solid @theme-color;
+  .toolbar-button {
+    color: @grey-color;
+    margin-left: 15px;
+  }
+  .toolbar-button:hover {
+    color: @grey-color;
+  }
+  &.custom {
+    width: 96%;
+    top: unset;
+    left: 2%;
+    bottom: 10px;
+  }
+}
+
+.compose-input {
+  flex: 1;
+  border: none;
+  font-size: 14px;
+  height: 48px;
+  background: none;
+  color: @black;
+  outline: thin;
+  padding: 5px 10px;
+}
+
+.compose-input::placeholder {
+  opacity: 0.3;
+}
+
+.grp-icons {
+  padding: 0 10px;
+  cursor: pointer;
+  position: relative;
+  .anticon-send {
+    font-size: 22px;
+    color: @theme-color;
+  }
+  &.custom {
+    display: flex;
+    .anticon-send {
+      margin-left: 15px;
+    }
+  }
+}
+
+.grp-emotions {
+  .anticon {
+    font-size: 22px;
+    color: @grey-color;;
+  }
+}
+
+.grp-file-icon {
+  height: 25px;
+  width: 28px;
+
+  .avatar-uploader {
+    .ant-upload {
+      width: auto;
+      height: auto;
+      background: transparent;
+      border: none;
+      margin: 0;
+    }
+  }
+
+  .ant-upload-select.ant-upload-select-picture-card .anticon {
+    position: unset;
+    top: unset;
+    left: unset;
+    color: @grey-color;;
+    font-size: 22px;
+    padding: 0;
+    background: transparent;
+  }
+}
+
+.grp-send {
+  height: 48px;
+  background: @theme-color;
+  padding: 12px 15px;
+  .anticon-send {
+    font-size: 18px;
+    color: @white;
+    transform: rotate(-45deg);
+  }
+  &:hover {
+    background: @primary-color;
+  }
+}

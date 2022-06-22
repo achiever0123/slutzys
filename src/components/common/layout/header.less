@@ -1,0 +1,220 @@
+@import '../../../../style/vars.less';
+
+.main-header {
+  background-color: #fff/* @primary-color */;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.header.ant-layout-header {
+  padding: 0;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  z-index: 9;
+  align-items: center;
+  background-color: #fff/* @primary-color */;
+  height: unset;
+  line-height: unset;
+
+  .nav-bar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    .left-conner {
+      display: flex;
+      width: 100%;
+      .logo-nav {
+        color: @text-color/* @white */;
+        font-size: 30px;
+        img {
+          height: 50px;
+        }
+      }
+      @media screen and (max-width: @mobile-screen) {
+        padding: 5px 0;
+        .logo-nav {
+          img {
+            height: 30px;
+          }
+        }
+      }
+      @media screen and (max-width: @tablet-screen) {
+        width: 20%;
+      }
+    }
+    .mid-conner {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: flex-end;
+      @media screen and (max-width: @mobile-screen) {
+        padding: 0;
+      }
+    }
+  }
+}
+
+.nav-icons {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  li {
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-size: 15px;
+    font-weight: 600;
+    .ant-badge-count {
+      background: @orange-color;
+      font-size: 11px;
+      box-shadow: none;
+      padding: 0 5px;
+      line-height: 20px;
+      min-width: 20px;
+      height: 20px;
+    }
+    &:hover {
+      .ant-badge-count {
+        opacity: 0.7;
+      }
+      a {
+        color: @secondary-color;
+      }
+      border-color: @secondary-color;
+    }
+    a {
+      color: @text-color/* @white */;
+      font-family: @primary-font-bold;
+    }
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    .anticon {
+      font-size: 20px;
+      &.anticon-custom {
+        font-size: 22px;
+      }
+    }
+    .cart-total {
+      position: absolute;
+      top: 2px;
+      right: 5px;
+    }
+    .ant-menu.ant-menu-light {
+      background-color: @primary-color;
+    }
+    &.custom {
+      .anticon {
+        display: none;
+      }
+    }
+  }
+  .right-menu {
+    padding: 15px 0;
+    .ant-menu-submenu-title {
+      padding: 0;
+    }
+  }
+  .active {
+    color: @white;
+    border-bottom: 2px solid;
+  }
+  @media (max-width: @mobile-screen) {
+    width: 100%;
+    justify-content: space-around;
+    &.custom {
+      justify-content: flex-end;
+    }
+    li {
+      padding: 5px 10px;
+      .cart-total {
+        top: 0px;
+        right: -2px;
+      }
+      &.custom {
+        .anticon {
+          display: block;
+        }
+        .hide {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.profile-drawer {
+  .profile-user {
+    display: flex;
+    img {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      margin-right: 5px;
+    }
+    .profile-name {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      text-transform: capitalize;
+      span {
+        color: @grey-color;
+        font-size: 12px;
+        text-transform: none;
+      }
+    }
+  }
+  a {
+    color: @dark-grey;
+  }
+  .ant-drawer-body {
+    padding: 10px 15px;
+    .profile-menu-item {
+      .menu-item {
+        padding: 5px;
+        margin-bottom: 2px;
+        width: 100%;
+        cursor: pointer;
+        font-size: 15px;
+        &.active, &:hover {
+          background-color: @theme-color;
+          color: @white;
+          border-radius: 5px;
+          opacity: 0.9;
+        }
+      }
+      .ant-divider {
+        margin: 10px 0;
+      }
+    }
+  }
+}
+
+.hide-mobile {
+  display: flex;
+  align-items: center;
+}
+
+
+@media (max-width: @mobile-screen) {
+  .hide-mobile {
+    display: none!important;
+  }
+}
+
+.adult-warning {
+  background-color: @black;
+  border: 1px solid @white;
+  border-radius: 3px;
+  padding-bottom: 0;
+  @media screen and (max-width: @mobile-screen) {
+    .ant-modal-body {
+      max-height: 90vh;
+      overflow-y: scroll;
+    }
+  }
+}

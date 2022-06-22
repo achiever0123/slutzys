@@ -1,0 +1,117 @@
+@import '../../../style/vars.less';
+
+.vid-card-new {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, .05);
+  position: relative;
+  transition: all 0.5s ease-in-out;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  height: 200px;
+  margin-bottom: 33px;
+  background-image: url('/placeholder-image.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .play-ico {
+    .anticon {
+      font-size: 24px;
+      color: @white;
+    }
+  }
+
+  .vid-stats {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 2px;
+    color: @gray;
+    font-size: 11px;
+    position: absolute;
+    bottom: 0;
+    background-image: linear-gradient(to bottom, #9a9a9a00 0%, #292929 100%);
+    .like {
+      span {
+        margin-right: 8px;
+        &.anticon {
+          margin-right: 0;
+        }
+      }
+    }
+
+    @media screen and (max-width: @mobile-screen) {
+      font-size: 10px;
+    }
+  }
+
+  .vid-info {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    font-family: @primary-font-bold;
+    background-color: @primary-color;
+    color: @white;
+    padding: 5px;
+    font-size: 12px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: capitalize;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    a {
+      color: @white;
+    }
+
+    @media screen and (max-width: @mobile-screen) {
+      font-size: 11px;
+    }
+  }
+
+  .vid-price {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .label-price {
+    color: @white;
+    background-color: @secondary-color;
+    padding: 3px 13px;
+    clip-path: polygon(0px 0px, 0px 100%, 100% 100%, 90% 50%, 100% 0);
+    font-size: 10px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    &.custom {
+      background-color: @primary-color;
+    }
+  }
+
+  &:hover {
+    .play-ico { 
+      .anticon {
+        color: @theme-color;
+      }
+    }
+    .vid-info {
+      background-color: @theme-color;
+    }
+  }
+
+  @media screen and (max-width: @mobile-screen) {
+    height: 140px;
+  }
+}
+
+.video-loading-new {
+  text-align: center;
+  margin-top: 50px;
+}

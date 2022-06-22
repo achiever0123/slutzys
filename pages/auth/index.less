@@ -1,0 +1,331 @@
+@import '../../style/vars';
+
+.model-photo-verification {
+  .ant-form-item-control {
+    text-align: left;
+  }
+  .ant-form-item-label {
+    font-weight: 600;
+  }
+}
+
+.login-box {
+  max-width: 1100px;
+  margin: 15px auto;
+  .login-form {
+    max-width: 400px;
+    margin: auto;
+  }
+  .ant-form-item {
+    margin-bottom: 20px;
+    .ant-input {
+      height: 40px;
+      padding: 10px;
+    }
+    .ant-select-selector {
+      height: 40px;
+    }
+  }
+  .title {
+    font-size: 24px;
+    font-weight: bolder;
+    margin: 20px 0;
+    text-align: center;
+    font-family: @primary-font-bold;
+  }
+  button.login-form-button {
+    height: 50px;
+    font-size: 16px;
+    color: @black;
+    margin-bottom: 15px;
+  }
+
+  .login-content {
+    padding: 20px 0;
+    position: relative;
+    min-height: 550px;
+    margin: 0 auto;
+    max-width: 1100px;
+    @media (max-width: @mobile-screen) {
+      padding: unset;
+    }
+    ul {
+      li {
+        font-weight: 600;
+        padding: 5px 5px 5px 10px;
+      }
+    }
+    //model
+    &.left {
+      background-image: url('/ct-bg.jpg');
+      background-size: 90%;
+      background-repeat: no-repeat;
+      background-position: center;
+      @media (max-width: @mobile-screen) {
+        display: none;
+      }
+      &.fixed {
+        background-size: 70%;
+      }
+    }
+    //member
+    &.right {
+      button.login-form-button {
+        width: 100%;
+        background-image: linear-gradient(0deg,@primary-color,@theme-color);
+        border-color: @theme-color;
+        color: @white;
+      }
+      .title {
+        h3 {
+          margin-top: 30px;
+          font-size: 28px;
+          font-weight: 700;
+          text-align: center;
+          font-family: @primary-font-bold
+        }
+      }
+      a {
+        font-weight: 600;
+        color: @theme-color
+      }
+      .ant-checkbox-wrapper .ant-checkbox-inner,
+      .ant-checkbox .ant-checkbox-inner {
+        border: 1.5px solid @white;
+        background-color: @theme-color;
+      }
+      .ant-checkbox-wrapper:hover .ant-checkbox-inner,
+      .ant-checkbox:hover .ant-checkbox-inner {
+        border: 1.5px solid @white;
+      }
+      .btn-primary.ant-btn {
+        color: @white;
+        background-image: linear-gradient(0deg,@primary-color,@theme-color);
+        box-shadow: 0 5px 10px rgba(50,50,50,0.2);
+      }
+    }
+  }
+}
+
+.register-box {
+  .ant-select-selector {
+    height: 40px;
+    .ant-select-selection-item {
+      line-height: 40px;
+    }
+  }
+  .ant-form-item {
+    margin-bottom: 10px;
+  }
+}
+
+.form {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  margin: -160px 0 0 -160px;
+  width: 320px;
+  height: 320px;
+  padding: 36px;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.08);
+
+  button {
+    width: 100%;
+  }
+
+  p {
+    color: rgb(204, 204, 204);
+    text-align: center;
+    margin-top: 16px;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.logo {
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 40px;
+    margin-right: 8px;
+  }
+
+  span {
+    vertical-align: text-bottom;
+    font-size: 16px;
+    text-transform: uppercase;
+    display: inline-block;
+    font-weight: 700;
+    color: @primary-color;
+    .text-gradient();
+  }
+}
+
+.ant-spin-container,
+.ant-spin-nested-loading {
+  height: 100%;
+}
+
+.error-message {
+  color: @error-color;
+}
+
+.forgot-box {
+  background-color: @black;
+  color: @white;
+  margin: 80px 30px;
+  padding: 20px;
+  h2,
+  h4 {
+    color: @white;
+  }
+  @media (max-width: @mobile-screen) {
+    .forgot-password {
+      margin: 40px auto 0;
+    }
+
+    .forgot-form {
+      .ant-form-item {
+        width: 300px;
+      }
+    }
+  }
+}
+
+.forgot-form {
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
+  padding: 70px 0;
+  align-items: center;
+  justify-content: center;
+  .ant-form-item {
+    margin-bottom: 10px;
+    width: 400px;
+    Input {
+      text-align: center;
+    }
+  }
+  Button {
+    width: 100%;
+    color: @black;
+  }
+}
+
+.switch-btn {
+  display: flex;
+  justify-content: center;
+  button {
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    font-family: @primary-font-bold;
+    cursor: pointer;
+    &:hover {
+      color: @primary-color;
+    }
+    &.active {
+      color: @primary-color;
+      border-bottom: 2px solid;
+    }
+  }
+}
+.switch-grp {
+  text-align: center;
+  .ant-switch {
+    background-color: @primary-color;
+    padding: 0px 30px;
+    height: 40px;
+    .ant-switch-handle {
+      &::before {
+        border-radius: 50%;
+      }
+      top: 1px;
+      left: 1px;
+      width: 38px;
+      height: 38px;
+    }
+  }
+  .ant-switch-checked .ant-switch-handle {
+    left: calc(100% - 38px - 1px);
+  }
+}
+.ant-form-item-control-input-content {
+  .ant-input {
+    padding: 2em 1em;
+    font-weight: 500;
+    font-size: 0.9em;
+    border-radius: 0.5em;
+  }
+}
+.welcome-box {
+  background-color: @light-blue;
+  margin: 3em 0;
+  padding: 3em;
+  border-radius: 10px;
+  h3 {
+    font-size: 1.8em;
+    font-weight: 800;
+    font-family: @primary-font-bold;
+  }
+  ul {
+    padding-left: 18px;
+    li {
+      color: @grey-color;
+      list-style: disc;
+    }
+  }
+}
+
+.social-login {
+  margin: 10px;
+  text-align: center;
+  .twitter-button {
+    background-color: @twitter-color;
+    color: @white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+}
+
+.email-verify-succsess {
+  width: 100%;
+    margin: auto;
+    text-align: center;
+    padding: 10px;
+}
+
+.id-block {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  .img-id {
+    max-width: 50%;
+    width: 175px;
+  }
+}
+.ant-form-item-explain {
+  text-align: center;
+  font-size: 10px;
+}
+.invitation-code {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  button {
+    margin-left: 10px;
+  }
+} 

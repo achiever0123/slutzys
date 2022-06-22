@@ -1,0 +1,63 @@
+.feed-card-wrapper:hover {
+    transition: box-shadow 0.3s, border-color 0.3s;
+}
+
+.card-header-wrapper {
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    align-items: center;
+    padding: 5px 5px;
+
+    .header-text-wrapper {
+        margin-left: 10px;
+        margin-right: auto;
+        padding: 0px 0px;
+
+        h6 {
+            font-size: medium;
+            padding: 0px 0px 3px 0px;
+            margin: 0px 0px;
+        }
+
+        p {
+            font-size: small;
+            opacity: 0.8;
+        }
+    }
+
+    .more-icon {
+        font-size: 24px;
+        color: @primary-color;
+    }
+}
+
+.profile-card-actions-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    .card-action-icons-wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .card-action-icon {
+        font-size: 24px;
+        padding-right: 3px;
+        color: @primary-color;
+    }
+}
+
+.post-description-wrapper {
+    padding: 0px 5px 5px 5px;
+    align-items: center;
+
+    p {
+        font-size: medium;
+        padding: 0px 0px;
+        margin: 0px 0px;
+    }
+}

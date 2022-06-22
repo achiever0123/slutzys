@@ -1,0 +1,37 @@
+@import './default.less';
+@import './mixin.less';
+
+@media screen and (max-width: @mobile-screen) {
+  .primary-container, #primaryLayout {
+    padding-top: 43px;
+  }
+  .ant-layout-content {
+    min-height: calc(100vh - 100px);
+  }
+  .main-footer {
+    font-size: 12px;
+  }
+  .mobile-search-bar {
+    width: 100%;
+    padding: 5px;
+  }
+  .ant-btn.info,
+  .ant-btn.secondary-custom{
+    margin-bottom: 5px;
+  }
+  .ant-table-thead > tr > th, .ant-table-tbody > tr > td, .ant-table tfoot > tr > th, .ant-table tfoot > tr > td{
+    padding: 10px 5px;
+  }
+  .ant-btn.secondary,
+  .ant-btn.primary{
+      display: block;
+      width: 100%;
+  }
+  .switch-grp{
+    margin-bottom: 10px;
+  }
+  textarea:focus, input:focus {
+    font-size: 16px!important;
+  }
+}
+

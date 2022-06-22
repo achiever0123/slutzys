@@ -1,0 +1,49 @@
+@import '../../style/vars.less';
+
+.ant-input-group {
+  display: flex;
+}
+
+.initial-price {
+  font-size: 22px;
+  font-weight: 700;
+
+  span {
+    font-size: 20px;
+    &.discount-price {
+      font-size: 18px;
+      color: @highlight-color;
+      -webkit-text-decoration-line: line-through;
+      text-decoration-line: line-through;
+    }
+  }
+}
+
+.text-link {
+  color: @primary-color;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.cart-form {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 5px;
+  background-color: @table-bg;
+
+  .ant-form-item {
+    margin-bottom: 0;
+
+    .ant-form-item-label {
+      padding: 0;
+
+      label {
+        font-size: 10px;
+      }
+    }
+
+    .ant-form-item-control {
+      padding: 0;
+    }
+  }
+}

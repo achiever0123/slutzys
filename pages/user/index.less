@@ -1,0 +1,22 @@
+@import '../../style/vars';
+@import '../../style/default';
+
+.user-profile-box {
+  margin: 40px 0;
+}
+.user-account {
+  .ant-tabs-nav-wrap {
+    margin: 1em 0
+  }
+  .ant-tabs-tab.ant-tabs-tab-active {
+    color: @primary-color!important;
+  }
+  .ant-tabs-nav .ant-tabs-tab {
+    font-size: 16px;
+    font-weight: 600;
+    color: @black;
+  }
+  @media screen and (max-width: @tablet-screen) {
+    padding: 5px;
+  }
+}
